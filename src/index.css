@@ -66,3 +66,24 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+table {
+  border: 1px solid white;
+}
+
+thead {
+  font-weight: 900;
+}
+
+td {
+  border: 1px solid white;
+  padding: 5px 10px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+table img {
+  width: 80px;
+}
