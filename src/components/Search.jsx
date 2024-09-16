@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { Results } from "./Results";
 
 export function Search() {
-  const [characterName, setCharacterName] = useState()
-  const [characterData, setCharacterData] = useState()
-  const [isTableVisible, setIsTableVisible] = useState()
+  const [characterName, setCharacterName] = useState();
+  const [characterData, setCharacterData] = useState();
+  const [isTableVisible, setIsTableVisible] = useState();
 
   async function getData(name) {
     // api from https://amiiboapi.com/
@@ -12,10 +12,9 @@ export function Search() {
     // https://www.amiiboapi.com/api/amiibo/?name=mario
 
     // TODO: ADD THE API CALL HERE
-    
 
-    setCharacterData(response)
-    setIsTableVisible(true)
+    setCharacterData(response);
+    setIsTableVisible(true);
   }
 
   function handleSubmit(e) {
@@ -24,7 +23,7 @@ export function Search() {
       "character-name-input"
     ).value;
     setCharacterName(characterNameInput);
-    setIsTableVisible(false)
+    setIsTableVisible(false);
   }
 
   useEffect(() => {
@@ -35,10 +34,15 @@ export function Search() {
     <>
       <h1>Amiibo finder</h1>
       <form onSubmit={handleSubmit}>
-        <input id="character-name-input" type="text" placeholder="Enter Character name"required />
+        <input
+          id="character-name-input"
+          type="text"
+          placeholder="Enter Character name"
+          required
+        />
         <button type="submit">Submit</button>
       </form>
-      <Results result={characterData} showTable={isTableVisible}/>
+      <Results result={characterData} showTable={isTableVisible} />
     </>
   );
 }
