@@ -1,12 +1,14 @@
-import "./App.css"
-import { Search } from "./components/Search"
+import "./App.css";
+import { Search } from "./components/Search";
+import { ScratchPad } from "./components/ScratchPad.jsx";
 
 function App() {
   return (
     <>
-      <Search />
+      <ScratchPad />
+      {/* <Search /> */}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
